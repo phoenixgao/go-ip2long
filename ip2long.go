@@ -22,12 +22,6 @@ var (
 	ErrOverflowedIPv4Segment = errors.New("overflowed ipv4 segment")
 )
 
-var typeDescMap = map[int]string{
-	digitMask: "digit",
-	dotMask:   "dot",
-	spaceMask: "space",
-}
-
 // IPv42long exports function that convert ipv4 string to an integer
 func IPv42long(ipStr string) (int, error) {
 	seg := -1
