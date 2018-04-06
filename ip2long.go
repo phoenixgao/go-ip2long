@@ -22,7 +22,9 @@ var (
 	ErrOverflowedIPv4Segment = errors.New("overflowed ipv4 segment")
 )
 
-// IPv42long exports function that convert ipv4 string to an integer
+// IPv42long exports function that convert an IPv4 string to an integer.
+// IP address strings that contain spaces between digit and dot are valid input, prefix zeros are also allowed.
+// Spaces between two digits are not allowed. More details see unit tests.
 func IPv42long(ipStr string) (int, error) {
 	seg := -1
 	segs := 0
