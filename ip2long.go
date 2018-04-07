@@ -35,7 +35,7 @@ func IPv42long(ipStr string) (int, error) {
 
 	// Iterate the input string
 	for _, char := range ipStr {
-		// Check if the current character matches our expection,
+		// Check if the current character matches our expectation,
 		// and also get the type (digit, dot, or space)
 		category, err := validateChar(char, bitmask, segs)
 		if err != nil {
